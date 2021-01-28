@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 //internal database
 import db from "../db.json";
@@ -14,6 +15,11 @@ import { QuizzContainer } from "../styles/pageStyles";
 export default function Home() {
   return (
     <QuizzBg backgroundImage={db.bg}>
+      <Head>
+        <title>{db.title}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:image" content={db.bg} key="bg_image" />
+      </Head>
       <QuizzContainer>
         <QuizzLogo />
         <Widget>
@@ -34,7 +40,7 @@ export default function Home() {
         </Widget>
         {/* <Footer /> */}
       </QuizzContainer>
-      <GitHubCorner projectUrl="https://github.com/omariosouto" />
+      <GitHubCorner projectUrl="https://github.com/tassiaaccioly" />
     </QuizzBg>
   );
 }

@@ -27,11 +27,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const Title = style.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
-
 export const BackgroundImage = style.main`
   background-image: url(${db.bg});
   flex: 1;
