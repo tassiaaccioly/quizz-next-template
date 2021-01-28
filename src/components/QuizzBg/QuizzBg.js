@@ -1,12 +1,26 @@
 import styled from "styled-components";
 
 const QuizzBg = styled.div`
+  position: relative;
   width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-image: url(${({ backgroundImage }) => backgroundImage});
-  background-color: ${({ theme }) => theme.colors.mainBg};
-  flex: 1;
+  height: 100vh;
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    background-image: url(${({ backgroundImage }) => backgroundImage});
+    background-color: ${({ theme }) => theme.colors.mainBg};
+    content: "";
+    transform: scaleX(-1);
+    flex: 1;
+  }
+  *:first-child {
+    position: relative;
+  }
   @media screen and (max-width: 500px) {
     background-image: none;
     &:after {

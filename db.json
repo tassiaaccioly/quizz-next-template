@@ -19,12 +19,13 @@
   "external": ["", ""],
   "theme": {
     "colors": {
-      "primary": "#4CAF50",
-      "secondary": "#FF9800",
-      "mainBg": "#1C1814",
+      "primary": "#75208C",
+      "secondary": "#141A26",
+      "mainBg": "#010D04",
+      "secondaryBg": "#141A26",
       "contrastText": "#FFF",
-      "wrong": "#FF5722",
-      "success": "#4CAF50"
+      "wrong": "#F20505",
+      "success": "#AD26BF"
     },
     "borderRadius": "4px"
   }
